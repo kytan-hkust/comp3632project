@@ -2,15 +2,23 @@
 #include <linux/module.h>
 
 MODULE_LICENSE("GPL");
+MODULE_AUTHOR(""); //
+MODULE_DESCRIPTION(""); //
 MODULE_VERSION("0.1");
 
-static int __init f(void) {
-    return 0;
-}
-
-static void __exit g(void) {
+// Hide this LKM rootkit itself
+static void hide_itself() {
     ;
 }
 
-module_init(f);
-module_exit(g);
+static int __init init_rootkit(void) {
+    hide_itself();
+    return 0;
+}
+
+static void __exit exit_rootkit(void) {
+    ;
+}
+
+module_init(init_rootkit);
+module_exit(exit_rootkit);
