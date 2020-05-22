@@ -1,10 +1,16 @@
 #!/bin/sh
 
-apt-get update
-apt-get upgrade
+apt-get --yes update
+apt-get --yes upgrade
 
-apt install gcc
-apt install make
-apt install chkrootkit
-apt install rkhunter
-apt install clamav
+# Install essential tools for compilation
+apt --yes install gcc
+apt --yes install make
+
+# Install malware scanning tools
+apt --yes install chkrootkit
+apt --yes install rkhunter
+apt --yes install clamav
+
+# Compile the rootkit and trojan
+make
