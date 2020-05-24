@@ -13,7 +13,7 @@ echo "Scanning with clamav..."
 
 
 # Unload the rootkit
-rmmod rootkit
+# rmmod rootkit
 
 # Clean the directory
 make clean
