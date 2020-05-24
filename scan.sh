@@ -7,7 +7,7 @@
 
 # rkhunter
 echo "Scanning with rkhunter... (this might take a while)"
-rkhunter --check > rkhunter.log
+rkhunter --check
 echo "Done scanning with rkhunter"
 echo "Rootkit scanning results of rkhunter:"
 cat /var/log/rkhunter.log | grep "Possible rootkits:"
